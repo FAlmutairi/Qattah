@@ -127,7 +127,7 @@
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" maximumValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="7Ae-RI-oot">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Ae-RI-oot">
                                                 <rect key="frame" x="194" y="260" width="94" height="32"/>
                                                 <connections>
                                                     <action selector="stepperValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="j2H-tD-8KW"/>
@@ -141,12 +141,13 @@
                                                     <constraint firstAttribute="height" constant="55" id="ODx-3J-3uI"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Calculate">
+                                                <buttonConfiguration key="configuration" style="filled" title="Calculate - إحسب">
+                                                    <fontDescription key="titleFontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                                     <color key="baseBackgroundColor" red="0.0" green="0.6588235294117647" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCr-HR-9cM"/>
-                                                    <segue destination="81g-e0-uo9" kind="presentation" id="1kv-IJ-rP6"/>
+                                                    <segue destination="81g-e0-uo9" kind="presentation" identifier="ResultVC" id="1kv-IJ-rP6"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5z-bE-UWV">
@@ -220,7 +221,7 @@
         <!--Results View Controller-->
         <scene sceneID="BpM-6Y-uNW">
             <objects>
-                <viewController storyboardIdentifier="ResultVC" id="81g-e0-uo9" customClass="ResultsViewController" customModule="Qattah" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="81g-e0-uo9" customClass="ResultsViewController" customModule="Qattah" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7em-Ha-rGh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

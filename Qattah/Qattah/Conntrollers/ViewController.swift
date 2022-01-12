@@ -8,13 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var backgroundOfinformation: UIView!
     @IBOutlet weak var calculaterButton: UIButton!
     @IBOutlet weak var billTotalTextField: UITextField!
     @IBOutlet weak var personNumberLabel: UILabel!
     
-   
+    
     var numberOfPeople = 0
     var billTotal = 0.0
     var finalResult = "0.0"
@@ -30,8 +30,9 @@ class ViewController: UIViewController {
     // This funcation is increase or descrease person
     @IBAction func stepperValueChange(_ sender: UIStepper) {
         
-//        stepperChange = Int(sender.value)
-//        personNumberLabel.text = "\(stepperChange)"
+        personNumberLabel.text = String(format: "%.0f", sender.value)
+        numberOfPeople = Int(sender.value)
+        
     }
     
     // This funcation is calculate
@@ -44,10 +45,20 @@ class ViewController: UIViewController {
             billTotal = Double(bill)!
             let result = billTotal / Double(numberOfPeople)
             finalResult = String(format: "%.2f", result)
+            print(finalResult)
         }
+        
+        self.performSegue(withIdentifier: "ResultVC", sender: self)
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ResultVC"{
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.result = finalResult
+        }
+    }
     
     
 }
