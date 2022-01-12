@@ -20,6 +20,7 @@
 		005F4A6C2789776F00B69871 /* Cairo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005F4A692789776F00B69871 /* Cairo-Medium.ttf */; };
 		005F4A6D2789776F00B69871 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005F4A6A2789776F00B69871 /* Cairo-SemiBold.ttf */; };
 		005F4A6E2789776F00B69871 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 005F4A6B2789776F00B69871 /* Cairo-Bold.ttf */; };
+		00C1EFBA278BB4CA002DD0AB /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1EFB9278BB4CA002DD0AB /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		005F4A692789776F00B69871 /* Cairo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Medium.ttf"; sourceTree = "<group>"; };
 		005F4A6A2789776F00B69871 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
 		005F4A6B2789776F00B69871 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		00C1EFB9278BB4CA002DD0AB /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,11 +72,12 @@
 		005F4A4B2789704300B69871 /* Qattah */ = {
 			isa = PBXGroup;
 			children = (
+				00C1EFB8278BB21A002DD0AB /* Model */,
+				00C1EFB7278BB212002DD0AB /* Views */,
+				00C1EFB6278BB1FA002DD0AB /* Conntrollers */,
 				005F4A60278974A900B69871 /* Fonts */,
 				005F4A4C2789704300B69871 /* AppDelegate.swift */,
 				005F4A4E2789704300B69871 /* SceneDelegate.swift */,
-				005F4A502789704300B69871 /* ViewController.swift */,
-				005F4A522789704300B69871 /* Main.storyboard */,
 				005F4A552789704600B69871 /* Assets.xcassets */,
 				005F4A572789704600B69871 /* LaunchScreen.storyboard */,
 				005F4A5A2789704600B69871 /* Info.plist */,
@@ -94,6 +97,30 @@
 				005F4A61278974C100B69871 /* ReemKufi-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		00C1EFB6278BB1FA002DD0AB /* Conntrollers */ = {
+			isa = PBXGroup;
+			children = (
+				005F4A502789704300B69871 /* ViewController.swift */,
+				00C1EFB9278BB4CA002DD0AB /* ResultsViewController.swift */,
+			);
+			path = Conntrollers;
+			sourceTree = "<group>";
+		};
+		00C1EFB7278BB212002DD0AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				005F4A522789704300B69871 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		00C1EFB8278BB21A002DD0AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +204,7 @@
 				005F4A512789704300B69871 /* ViewController.swift in Sources */,
 				005F4A4D2789704300B69871 /* AppDelegate.swift in Sources */,
 				005F4A4F2789704300B69871 /* SceneDelegate.swift in Sources */,
+				00C1EFBA278BB4CA002DD0AB /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
